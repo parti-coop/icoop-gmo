@@ -21,6 +21,7 @@ gem 'unobtrusive_flash', '~> 3.1'
 gem "recaptcha", require: "recaptcha/rails"
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'ruby_dig', '~> 0.0.2'
 
 # seo
 gem 'meta-tags', '~> 2.1.0'
