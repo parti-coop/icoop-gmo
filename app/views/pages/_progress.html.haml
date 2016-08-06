@@ -1,0 +1,20 @@
+- petition = @petitions.first
+.progress-panel
+  %p.petition-summary
+    온라인 서명은
+    %span
+      %span.petition-count> #{@online_count}
+      명, 오프라인 서명은
+    %span
+      %span.petition-count> #{@offline_count}
+      명 진행 중!
+
+  .petition-bar-wrapper
+    %span.petition-percentage.pull-left #{petition.total_percentage}%
+    %span.petition-goal.pull-right 100,000명 목표
+    .petition-bar{style: ("background-color:#bfbfbf" if petition.on_off_count == 0)}
+      .petition-counted{style: "width: #{petition.total_percentage}%"}
+  %br
+  .petition-btn.btn
+    서명하기
+

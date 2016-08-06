@@ -1,6 +1,9 @@
 .intro-panel
   = image_tag 'baggum-logo-after.png', class: 'baggum-logo-after pull-left'
-  = image_tag 'social-icon-after.png', class: 'social-icon-after pull-right'
+  .social-after.pull-right
+    = image_tag 'social-after-facebook.png', class: 'social-after__facebook'
+    = image_tag 'social-after-twitter.png', class: 'social-after__twitter'
+    = image_tag 'social-after-kas.png', class: 'social-after__kas'
   %p.intro-title
     GMO완전표시제
   %p.intro-subtitle
@@ -23,4 +26,4 @@
     = image_tag 'double-qoutation-right.png', class: 'double-qoutation-right'
   = image_tag 'intro.png', class: 'intro-image'
   %br
-  = render 'petition_progress'
+  = render 'progress'

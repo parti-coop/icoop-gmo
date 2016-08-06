@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806042454) do
+ActiveRecord::Schema.define(version: 20160806100046) do
+
+  create_table "offline_petitions", force: :cascade do |t|
+    t.integer  "offline_count", limit: 4, null: false
+    t.datetime "created_at",              null: false
+    t.datetime "updated_at",              null: false
+  end
 
   create_table "petitions", force: :cascade do |t|
     t.string   "name",       limit: 255,   null: false

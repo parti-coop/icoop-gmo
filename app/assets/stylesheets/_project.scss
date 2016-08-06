@@ -13,10 +13,23 @@ section#project {
       text-align: center;
       .baggum-logo-after {
         margin-top: -70px;
+        width: 120px;
       }
-      .social-icon-after {
+      .social-after {
         margin-top: -70px;
+
+        &__facebook {
+          padding-right: 20px;
+        }
+        &__twitter {
+          padding-right: 20px;
+        }
+        &__kas {
+
+        }
       }
+
+
       .intro-title {
         margin-left: 360px;
         margin-right: 360px;
@@ -27,19 +40,21 @@ section#project {
         background-color: #d0583b;
         color: #fff;
       }
+
       .intro-subtitle {
         font-size: 56px;
         font-weight: 600;
       }
+
       .intro-body {
         color: #9c9c9c;
         padding-top: 10px;
       }
+
       .intro-message {
         padding-top: 12px;
-        font-family: "Nanum Myeongjo", sans-serif;
         font-style: italic;
-        font-size: 18px;
+        font-size: 20px;
         color: #638a73;
         .double-qoutation-left {
           padding-bottom: 6px;
@@ -50,10 +65,62 @@ section#project {
           width: 18px;
         }
       }
+
       .intro-image {
         margin-top: -320px;
         margin-left: 62px;
         width: 92%;
+      }
+
+      .progress-panel {
+        padding-top: 16px;
+        padding-bottom: 36px;
+
+        .petition-summary {
+          font-size: 20px;
+
+          .petition-count {
+            color: #966fd6;
+            font-weight: 600;
+          }
+        }
+
+        .petition-bar-wrapper {
+          width: 530px;
+          display: inline-block;
+          padding-bottom: 20px;
+          .petition-percentage {
+            margin-bottom: -4px;
+            font-size: 28px;
+            color: #966fd6;
+            font-weight: 600;
+          }
+          .petition-goal {
+            font-weight: 600;
+            padding-top: 14px;
+          }
+          .petition-bar {
+            width: 100%;
+            display: inline-block;
+            height: 18px;
+            background-color: #fff;
+            @media (max-width: 767px) {
+              margin: 30px 14px 20px;
+            }
+
+            .petition-counted {
+              height: 100%;
+              background-color: #966fd6;
+            }
+          }
+        }
+
+        .petition-btn {
+          padding: 12px 48px;
+          background-color: #6144a3;
+          color: #fff;
+          font-size: 20px;
+        }
       }
     }
 
