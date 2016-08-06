@@ -14,6 +14,9 @@ gem 'bootstrap-sass', '~> 3.3', '>= 3.3.5.1'
 gem 'haml-rails', '~> 0.9.0'
 gem 'jquery-rails'
 
+# util
+gem 'kaminari', '~> 0.16.3'
+
 # tool
 gem 'envyable', '~> 0.2.0'
 gem 'seed-fu', '~> 2.3', '>= 2.3.5'

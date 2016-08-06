@@ -1,17 +1,22 @@
-%section
-  .container
-    %p 서명하기
-    #petition-form-panel
-      = render 'petitions/form'
-  %bre
-  %br
-  %br
-  %p 서명리스트
-  - @petitions.each do |p|
-    = p.name
+%section#project
+  %section#intro
+    .container
+      = render 'intro'
+  %section#petition
+    .container
+      %p 서명하기
+      #petition-form-panel
+        = render 'petitions/form'
+    %bre
     %br
-    = p.email
     %br
-    = p.body
-    %br
-    %hr
+    %p 서명리스트
+    - @petitions.each do |p|
+      = p.name
+      %br
+      = p.email
+      %br
+      = p.body
+      %br
+      %hr
+    = paginate @petitions

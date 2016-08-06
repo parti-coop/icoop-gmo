@@ -1,0 +1,61 @@
+section#project {
+
+  section#intro {
+    padding-top: 120px;
+
+    background: #f3f3f3; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(#fff, #e5e5e5); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#fff, #e5e5e5); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#fff, #e5e5e5); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#fff, #e5e5e5); /* Standard syntax */
+
+    .intro-panel {
+      text-align: center;
+      .baggum-logo-after {
+        margin-top: -70px;
+      }
+      .social-icon-after {
+        margin-top: -70px;
+      }
+      .intro-title {
+        margin-left: 360px;
+        margin-right: 360px;
+        padding-top: 10px;
+        padding-bottom: 4px;
+        font-size: 56px;
+        font-weight: 600;
+        background-color: #d0583b;
+        color: #fff;
+      }
+      .intro-subtitle {
+        font-size: 56px;
+        font-weight: 600;
+      }
+      .intro-body {
+        color: #9c9c9c;
+        padding-top: 10px;
+      }
+      .intro-message {
+        padding-top: 12px;
+        font-family: "Nanum Myeongjo", sans-serif;
+        font-style: italic;
+        font-size: 18px;
+        color: #638a73;
+        .double-qoutation-left {
+          padding-bottom: 6px;
+          width: 18px;
+        }
+        .double-qoutation-right {
+          margin-right: 10px;
+          width: 18px;
+        }
+      }
+      .intro-image {
+        margin-top: -320px;
+        margin-left: 62px;
+        width: 92%;
+      }
+    }
+
+  }
+}

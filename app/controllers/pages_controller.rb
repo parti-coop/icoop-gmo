@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
   def home
-    @petitions = Petition.all
+    @petitions = Petition.page params[:page]
   end
 end
