@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160804120200) do
+ActiveRecord::Schema.define(version: 20160806042454) do
 
   create_table "petitions", force: :cascade do |t|
     t.string   "name",       limit: 255,   null: false
@@ -20,5 +20,7 @@ ActiveRecord::Schema.define(version: 20160804120200) do
     t.datetime "created_at",               null: false
     t.datetime "updated_at",               null: false
   end
+
+  add_index "petitions", ["email"], name: "index_petitions_on_email", unique: true, using: :btree
 
 end

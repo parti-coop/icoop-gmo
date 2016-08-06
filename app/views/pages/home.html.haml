@@ -1,2 +1,17 @@
-고
-= Petition.first.inspect
+%section
+  .container
+    %p 서명하기
+    #petition-form-panel
+      = render 'petitions/form'
+  %bre
+  %br
+  %br
+  %p 서명리스트
+  - @petitions.each do |p|
+    = p.name
+    %br
+    = p.email
+    %br
+    = p.body
+    %br
+    %hr

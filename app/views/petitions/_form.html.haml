@@ -1,0 +1,15 @@
+- petition = local_assigns[:petition] || Petition.new
+
+= form_for petition, remote: true do |f|
+  .form-group
+    = f.text_field :name, class: 'form-control', placeholder: '이름', data: {'rule-required': true, 'msg': '이름을 입력해주세요'}
+  .form-group{ class: ('has-error' if petition.errors.include? :email) }
+    = f.email_field :email, class: 'form-control', placeholder: '이메일', data: {'rule-required': true, 'msg': '이메일을 입력해주세요'}
+    - if petition.errors.include? :email
+      %p.help-block
+        - petition.errors.full_messages_for(:email).each do |message|
+          = message
+          %br
+  = f.text_area :body, class: 'form-control', placeholder: '한 마디'
+  = f.submit '서명하기', data: { disable_with: "서명 중..." }
+  = hidden_field_tag :hiddenRecaptcha, nil

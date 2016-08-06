@@ -1,5 +1,9 @@
 class ApplicationController < ActionController::Base
-  # Prevent CSRF attacks by raising an exception.
-  # For APIs, you may want to use :null_session instead.
+  after_filter :prepare_unobtrusive_flash
+
   protect_from_forgery with: :exception
+
+  def errors_to_flash(model)
+    flash[:notice] = model.errors.full_messages.join('<br>').html_safe
+  end
 end

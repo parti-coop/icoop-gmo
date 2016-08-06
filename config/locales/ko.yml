@@ -1,0 +1,12 @@
+ko:
+  errors:
+    format: "%{message}"
+  activerecord:
+    errors:
+      models:
+        petition:
+          attributes:
+            email:
+              taken: 해당 이메일로 이미 서명하셨습니다.
+
+
