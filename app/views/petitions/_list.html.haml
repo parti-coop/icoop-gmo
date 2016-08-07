@@ -1,0 +1,12 @@
+%p 서명리스트
+= @petitions.count
+%br
+- @petitions.each do |p|
+  = p.name
+  %br
+  = p.email
+  %br
+  = p.body
+  %br
+  %hr
+= paginate @petitions

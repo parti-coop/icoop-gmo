@@ -1,7 +1,7 @@
 class PagesController < ApplicationController
   def home
-    @petitions = Petition.page params[:page]
+    @petitions = Petition.recent.page params[:page]
     @online_count = Petition.count
-    @offline_count = OfflinePetition.last.offline_count
+    @offline_count = (OfflinePetition.count == 0 ? 0 : OfflinePetition.last.offline_count)
   end
 end

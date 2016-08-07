@@ -190,5 +190,75 @@ section#project {
 
   section#petition {
     background-color: #f9f9f9;
+
+    .petition-form-panel {
+      text-align: center;
+
+      .petition-wrapper {
+        width: 530px;
+        display: inline-block;
+        text-align: left;
+        padding-top: 40px;
+
+        label.error {
+          padding-left: 12px;
+          color: red;
+        }
+        input.error {
+          border-color: red;
+          color: red;
+        }
+        .petition-label {
+          padding-left: 12px;
+          color: #878787;
+          &__policy {
+            padding-left: 0;
+            color: #878787;
+          }
+        }
+        .petition-name {
+          display: inline-block;
+          width: 30%;
+        }
+        .petition-email {
+          display: inline-block;
+          width: 60%;
+        }
+        .petition-body {
+
+        }
+        .petition-btn-wrapper {
+          text-align: center;
+
+          .petition-btn {
+            padding: 16px 114px;
+            background-color: #6144a3;
+            color: #fff;
+            font-size: 30px;
+            margin-top: 20px;
+          }
+        }
+
+      }
+
+      .modal-content {
+
+        .modal-header {
+
+        }
+        .modal-title {
+
+        }
+        .modal-body {
+          text-align: left;
+          .indent {
+            padding-left: 20px;
+          }
+          b {
+            font-size: 16px;
+          }
+        }
+      }
+    }
   }
 }

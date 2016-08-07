@@ -6,8 +6,12 @@
 //= require unobtrusive_flash_bootstrap
 
 $(function(){
-  $('form#new_petition').validate({
-    ignore: ".ignore",
-
+  jQuery.validator.setDefaults({
+    debug: true,
+    success: "valid"
   });
+  $('form#new_petition').validate({
+    ignore: ".ignore"
+  });
+
 });
