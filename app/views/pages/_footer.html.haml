@@ -1,0 +1,14 @@
+.footer-panel
+  %p.footer-icoop-ask.pull-left
+    %span.footer-icoop-ask__text
+      문의하기
+    %span
+      = link_to 'https://www.facebook.com/inmycart/', 'https://www.facebook.com/inmycart/', target: '_blank', class: 'footer-icoop-ask__url'
+  .logo-wrapper.pull-right
+    = link_to 'http://icoop.coop/', target: '_blank' do
+      = image_tag 'icoop-logo.png', class: 'icoop-logo'
+    = link_to 'http://parti.xyz/', target: '_blank' do
+      = image_tag 'parti-logo.png', class: 'parti-logo'
+  %br
+  = link_to 'http://up.parti.xyz/', target: '_blank' do
+    = image_tag 'bubble-banner.png', class: 'bubble-banner'

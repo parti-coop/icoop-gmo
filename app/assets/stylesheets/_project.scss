@@ -320,4 +320,36 @@ section#project {
       }
     }
   }
+
+  section#footer {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 60px;
+    background-color: #f9f9f9;
+    a {
+      &:hover {
+        text-decoration: none;
+      }
+    }
+
+    .footer-panel {
+      width: 560px;
+      display: inline-block;
+
+      .footer-icoop-ask {
+        &__url {
+          color: #966fd6;
+        }
+      }
+
+      .icoop-logo {
+        padding-right: 16px;
+      }
+
+      .bubble-banner {
+        width: 100%;
+        padding-top: 20px;
+      }
+    }
+  }
 }
