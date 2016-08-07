@@ -199,6 +199,7 @@ section#project {
         display: inline-block;
         text-align: left;
         padding-top: 40px;
+        padding-bottom: 40px;
 
         label.error {
           padding-left: 12px;
@@ -258,6 +259,64 @@ section#project {
             font-size: 16px;
           }
         }
+      }
+    }
+  }
+
+  section#list {
+    #petition-list-panel {
+      text-align: center;
+
+      .petition-panel {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 530px;
+        display: inline-block;
+        text-align: left;
+
+
+        .list-title {
+          color: #6144a3;
+          margin-bottom: -14px;
+        }
+        .list-wrapper {
+          padding-left: 10px;
+          padding-right: 10px;
+
+          .list-name {
+            color: #966fd6;
+            font-weight: 500;
+            padding-right: 6px;
+          }
+          .list-body {
+            font-weight: 500;
+            padding-top: 4px;
+          }
+        }
+
+        .petitions-pagination {
+          text-align: center;
+          color: #5d5d5d;
+          text-align: center;
+          font-size: 12px;
+
+          .pagination-wrapper {
+            text-align: center;
+
+            .pagination li {
+              padding-right: 5px;
+              padding-left: 5px;
+              font-size: 14px;
+              a {
+                float: initial;
+                color: black;
+                font-weight: 900;
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
       }
     }
   }

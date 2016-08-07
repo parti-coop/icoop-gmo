@@ -1,12 +1,17 @@
-%p 서명리스트
-= @petitions.count
-%br
-- @petitions.each do |p|
-  = p.name
-  %br
-  = p.email
-  %br
-  = p.body
-  %br
+- petitions = local_assigns[:petitions] || @petitions
+.petition-panel
+  %h3.list-title 서명리스트
   %hr
-= paginate @petitions
+  - petitions.each do |p|
+    .list-wrapper
+      %span.list-name
+        = p.name
+      %span.list-date
+        = date_f p.created_at
+      %br
+      %p.list-body
+        = p.body
+        = '서명합니다.' if p.body.blank?
+    %hr
+  .petitions-pagination
+    = paginate @petitions, remote: true, params: { controller: :petitions, action: :index }

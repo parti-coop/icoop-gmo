@@ -1,7 +1,6 @@
 <% if @petition.errors.any? %>
-  abort(@petition.errors)
   $('#petition-form-panel').html('<%= escape_javascript(render "petitions/form", petition: @petition) %>');
 <% else %>
   $('#petition-form-panel').html('<%= escape_javascript(render "petitions/thanks", petition: @petition) %>');
-  $('#petition-list-panel').html('<%= escape_javascript(render "petitions/list") %>');
+  $('#petition-list-panel').html('<%= escape_javascript(render "petitions/list", petitions: @petitions) %>');
 <% end %>
