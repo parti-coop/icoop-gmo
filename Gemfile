@@ -16,6 +16,7 @@ gem 'jquery-rails'
 
 # util
 gem 'kaminari', '~> 0.16.3'
+gem 'browser', '~> 2.0', '>= 2.0.2'
 
 # tool
 gem 'envyable', '~> 0.2.0'

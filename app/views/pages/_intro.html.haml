@@ -1,21 +1,33 @@
 .intro-panel
-  = link_to 'https://www.facebook.com/inmycart/', target: '_blank' do
-    = image_tag 'baggum-logo-before.png', class: 'baggum-logo pull-left'
-  .social-icon.pull-right
-    = image_tag 'social-before-facebook.png', class: 'social-icon__facebook'
-    = image_tag 'social-before-twitter.png', class: 'social-icon__twitter'
-    = image_tag 'social-before-kas.png', class: 'social-icon__kas'
+  - unless browser.device.mobile?
+    = link_to 'https://www.facebook.com/inmycart/', target: '_blank' do
+      = image_tag 'baggum-logo-before.png', class: 'baggum-logo pull-left'
+    .social-icon.pull-right
+      = image_tag 'social-before-facebook.png', class: 'social-icon__facebook'
+      = image_tag 'social-before-twitter.png', class: 'social-icon__twitter'
+      = image_tag 'social-before-kas.png', class: 'social-icon__kas'
+  - if browser.device.mobile?
+    = link_to 'https://www.facebook.com/inmycart/', target: '_blank' do
+      = image_tag 'baggum-logo-mobile.png', class: 'baggum-logo--mobile pull-left'
+    .social-icon--mobile.pull-right
+      = image_tag 'social-after-facebook.png', class: 'social-icon--mobile__facebook'
+      = image_tag 'social-after-twitter.png', class: 'social-icon--mobile__twitter'
+      = image_tag 'social-after-kas.png', class: 'social-icon--mobile__kas'
+    %br
+    %hr.intro-hr
   %p.intro-title
     GMO완전표시제
   %p.intro-subtitle
-    입법 청원과 지지를 위한 서명
-  %p.intro-body
+    입법 청원과
+    %br.visible-xs
+    지지를 위한 서명
+  %p.intro-body.hidden-xs
     있으나마나한 현행 GMO표시제! 과도한 규제로 NON-GMO 표시는 할 수 없습니다.
     %br
     식용유, 간장, 액상과당은 GMO원재료로 만들어도 GMO 표시가 면제됩니다.
     %br
     매일 먹는 쌀의 2/3만큼의 GMO를 먹고 있지만 알 수 있는 방법은 없습니다.
-  %p.intro-message
+  %p.intro-message.hidden-xs
     = image_tag 'double-qoutation-left.png', class: 'double-qoutation-left'
     %br
     투명한 GMO 정보 공개,
@@ -25,6 +37,7 @@
     소비자 기본권입니다
     %br
     = image_tag 'double-qoutation-right.png', class: 'double-qoutation-right'
-  = image_tag 'intro.png', class: 'intro-image'
+  = image_tag 'intro.png', class: 'intro-image hidden-xs'
+  = image_tag 'intro-mobile.png', class: 'intro-image--mobile visible-xs'
   %br
   = render 'progress'

@@ -6,10 +6,10 @@
     .petition-wrapper
       .form-group.petition-name
         = f.label :name, '이름', class: 'petition-label'
-        = f.text_field :name, class: 'form-control', placeholder: '필수', data: {'rule-required': true, 'msg': '이름을 입력해주세요'}
+        = f.text_field :name, class: 'form-control', placeholder: '필수입력', data: {'rule-required': true, 'msg': '이름을 입력해주세요'}
       .form-group.petition-email.pull-right{ class: ('has-error' if petition.errors.include? :email) }
         = f.label :email, '이메일', class: 'petition-label'
-        = f.email_field :email, class: 'form-control', placeholder: '필수', data: {'rule-required': true, 'msg': '이메일을 입력해주세요'}
+        = f.email_field :email, class: 'form-control', placeholder: '필수입력', data: {'rule-required': true, 'msg': '이메일을 입력해주세요'}
         - if petition.errors.include? :email
           %p.help-block
             - petition.errors.full_messages_for(:email).each do |message|
@@ -17,11 +17,15 @@
               %br
       .form-group.petition-body
         = f.label :body, '서명 한마디', class: 'petition-label'
-        = f.text_area :body, class: 'form-control', placeholder: '선택'
+        = f.text_area :body, class: 'form-control', placeholder: '선택입력'
       .form-group.petition-policy-agree{ class: ('has-error' if petition.errors.include? :policy_agree) }
         = check_box_tag 'petition[policy_agree]', 1, false, data: {'rule-required': true, 'msg': '개인정보 취급방침에 동의해야 합니다'}
         %a.petition-label__policy{"data-target" => "#policy-detail", "data-toggle" => "modal", :type => "button"}
-          개인정보 취급방침에 동의합니다.
+          &nbsp;개인정보 취급방침
+        에 동의합니다.
+        %br.visible-xs
+        %span.petition-label__policy-next
+          (GMO완전표시제 입법 활동 완료 후 개인정보는 모두 폐기합니다.)
       .petition-btn-wrapper
         = f.submit '서명하기', data: { disable_with: "서명 중..." }, class: 'petition-btn btn'
 

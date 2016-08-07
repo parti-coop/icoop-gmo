@@ -10,5 +10,9 @@
     = link_to 'http://parti.xyz/', target: '_blank' do
       = image_tag 'parti-logo.png', class: 'parti-logo'
   %br
-  = link_to 'http://up.parti.xyz/', target: '_blank' do
-    = image_tag 'bubble-banner.png', class: 'bubble-banner'
+  - unless browser.device.mobile?
+    = link_to 'http://up.parti.xyz/', target: '_blank' do
+      = image_tag 'bubble-banner.png', class: 'bubble-banner'
+  - if browser.device.mobile?
+    = link_to 'http://up.parti.xyz/', target: '_blank' do
+      = image_tag 'bubble-banner-mobile.png', class: 'bubble-banner--mobile'
