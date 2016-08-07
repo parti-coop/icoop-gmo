@@ -260,6 +260,39 @@ section#project {
         }
       }
     }
+
+    .petition-thanks-panel {
+      text-align: center;
+      padding-top: 100px;
+      padding-bottom: 100px;
+
+      .thanks-wrapper {
+        width: 530px;
+        display: inline-block;
+
+        .petition-complete {
+          &__title {
+            padding-top: 6px;
+            font-size: 18px;
+          }
+          &__message {
+            color: #6144a3;
+            font-size: 30px;
+            padding-top: 14px;
+            padding-bottom: 14px;
+          }
+        }
+
+        .thanks-social-wrapper {
+          img {
+            width: 54px;
+            margin-left: 5px;
+            margin-right: 5px;
+          }
+        }
+      }
+
+    }
   }
 
   section#list {
