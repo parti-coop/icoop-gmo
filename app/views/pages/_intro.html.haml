@@ -1,9 +1,10 @@
 .intro-panel
-  = image_tag 'baggum-logo-after.png', class: 'baggum-logo-after pull-left'
-  .social-after.pull-right
-    = image_tag 'social-after-facebook.png', class: 'social-after__facebook'
-    = image_tag 'social-after-twitter.png', class: 'social-after__twitter'
-    = image_tag 'social-after-kas.png', class: 'social-after__kas'
+  = link_to 'https://www.facebook.com/inmycart/', target: '_blank' do
+    = image_tag 'baggum-logo-before.png', class: 'baggum-logo pull-left'
+  .social-icon.pull-right
+    = image_tag 'social-before-facebook.png', class: 'social-icon__facebook'
+    = image_tag 'social-before-twitter.png', class: 'social-icon__twitter'
+    = image_tag 'social-before-kas.png', class: 'social-icon__kas'
   %p.intro-title
     GMO완전표시제
   %p.intro-subtitle
