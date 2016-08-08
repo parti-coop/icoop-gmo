@@ -18,9 +18,11 @@ $(function(){
     function() {
       image_url = location.protocol + "//" + location.hostname + "/images/baggum-logo-after.png";
       $( this ).attr('src', image_url);
+      console.log(image_url)
     }, function() {
       image_url = location.protocol + "//" + location.hostname + "/images/baggum-logo-before.png";
       $( this ).attr('src', image_url);
+      console.log(image_url)
     }
   );
 
