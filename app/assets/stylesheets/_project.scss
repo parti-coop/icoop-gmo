@@ -1,4 +1,20 @@
-
+#bottom-banner-wrapper {
+  text-align: center;
+  z-index: 10000;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  transition: bottom 0.2s ease-in-out;
+  padding: 10px 0;
+  #bottom-banner {
+    background-color: #6144a3;
+    color: #fff;
+    font-size: 24px;
+    padding: 14px 0;
+    display: inline-block;
+    width: 84%;
+  }
+}
 .test-image1 {
   src: asset_url('social-before-facebook.png');
   height: 100px;

@@ -16,4 +16,6 @@
   %section#footer
     .container
       = render 'footer'
+  #bottom-banner-wrapper.visible-xs
+    = link_to '서명하기', root_path(anchor: 'petition-form-anchor'),  class: 'btn', id: 'bottom-banner'
 

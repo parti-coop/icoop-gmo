@@ -46,4 +46,12 @@ $(function(){
     }
   );
 
+
+  $(window).scroll(function(){
+    if($('#bottom-banner-wrapper').offset().top >= $('#hide-fixed-button').offset().top) {
+      $('#bottom-banner-wrapper').css('margin-bottom','-100px');
+    }else {
+      $('#bottom-banner-wrapper').css('margin-bottom','0');
+    };
+  })
 });
