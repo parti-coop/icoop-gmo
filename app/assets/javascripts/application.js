@@ -16,13 +16,9 @@ $(function(){
 
   $('.baggum-logo').hover(
     function() {
-      image_url = location.protocol + "//" + location.hostname + "/images/baggum-logo-after.png";
-      $( this ).attr('src', image_url);
-      console.log(image_url)
+      $( this ).attr('src', '/assets/baggum-logo-after-f14a822c5a3cca0249d20748e0ed2bc286dc6299c2acde73d0af85b522c075b8.png');
     }, function() {
-      image_url = location.protocol + "//" + location.hostname + "/images/baggum-logo-before.png";
-      $( this ).attr('src', image_url);
-      console.log(image_url)
+      $( this ).attr('src', '/assets/baggum-logo-before-4c2b3b24e8aeb4fe641b3988181957d2daa9fc6aaaad1a1f88498bd0df0e5a96.png');
     }
   );
 
