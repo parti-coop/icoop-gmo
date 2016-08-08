@@ -24,25 +24,25 @@ $(function(){
 
   $('.social-icon__facebook').hover(
     function() {
-      $( this ).attr('src', '/assets/social-after-facebook.png');
+      $( this ).attr('src', '/assets/social-after-facebook-9da7838e6d2d559d60b354a464dd0c2bea279368502d4d76004a161814f6f32b.png');
     }, function() {
-      $( this ).attr('src', '/assets/social-before-facebook.png');
+      $( this ).attr('src', '/assets/social-before-facebook-c2436b3437a87a4bb9ede976012016141113898d49795cc70d76788706f964b7.png');
     }
   );
 
   $('.social-icon__twitter').hover(
     function() {
-      $( this ).attr('src', '/assets/social-after-twitter.png');
+      $( this ).attr('src', '/assets/social-after-twitter-253edbc0b6a1c30024f2c001c77b36ac80fc73808bd2f31850dd91a278deedac.png');
     }, function() {
-      $( this ).attr('src', '/assets/social-before-twitter.png');
+      $( this ).attr('src', '/assets/social-before-twitter-a995135dba2fa96c4d2943aaa5fee4ba9dbb1e77273d28f43299d84b348f9951.png');
     }
   );
 
   $('.social-icon__kas').hover(
     function() {
-      $( this ).attr('src', '/assets/social-after-kas.png');
+      $( this ).attr('src', '/assets/social-after-kas-5ad76463c77d8c851d62dff2184bcc0d1d434f25a71e2f377f8eae736eb6f2eb.png');
     }, function() {
-      $( this ).attr('src', '/assets/social-before-kas.png');
+      $( this ).attr('src', '/assets/social-before-kas-806011bf766c5f7422282fd64eba9fe125b2138fbb4315c1d36ff12117555a67.png');
     }
   );
 

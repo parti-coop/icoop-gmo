@@ -1,5 +1,27 @@
-.test-image {
-  src: asset_url('baggum-logo-after.png');
+
+.test-image1 {
+  src: asset_url('social-before-facebook.png');
+  height: 100px;
+}
+.test-image2 {
+  src: asset_url('social-after-facebook.png');
+  height: 100px;
+}
+.test-image3 {
+  src: asset_url('social-before-twitter.png');
+  height: 100px;
+}
+.test-image4 {
+  src: asset_url('social-after-twitter.png');
+  height: 100px;
+}
+.test-image5 {
+  src: asset_url('social-before-kas.png');
+  height: 100px;
+}
+.test-image6 {
+  src: asset_url('social-after-kas.png');
+  height: 100px;
 }
 
 section#project {
