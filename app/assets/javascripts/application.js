@@ -16,9 +16,11 @@ $(function(){
 
   $('.baggum-logo').hover(
     function() {
-      $( this ).attr('src', '/assets/baggum-logo-after.png');
+      image_url = location.protocol + "//" + location.hostname + "/images/baggum-logo-after.png";
+      $( this ).attr('src', image_url);
     }, function() {
-      $( this ).attr('src', '/assets/baggum-logo-before.png');
+      image_url = location.protocol + "//" + location.hostname + "/images/baggum-logo-before.png";
+      $( this ).attr('src', image_url);
     }
   );
 
