@@ -22,8 +22,7 @@ class PetitionsController < ApplicationController
   private
 
   def petition_params
-    params.require(:petition).permit(:name, :email, :body)
-    # params.require(:petition).permit(:name, :email, :body, :policy_agree)
+    params.require(:petition).permit(:name, :email, :body, :policy_agree)
   end
 
 end

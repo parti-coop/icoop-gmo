@@ -3,7 +3,8 @@ class Petition < ActiveRecord::Base
   scope :recent, -> { order(created_at: :desc) }
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
-  # validates :policy_agree, acceptance: true
+  validates :policy_agree, presence: true
+  attr_accessor :policy_agree
 
   def on_off_count
     Petition.count.to_i + (OfflinePetition.count == 0 ? 0 : OfflinePetition.last.offline_count.to_i)
