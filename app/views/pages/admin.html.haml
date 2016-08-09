@@ -1,7 +1,7 @@
 %section#offline-input
   .container
     .form-group
-      %p.now-count 현재 오프라인 서명인원: #{OfflinePetition.last.offline_count}
+      %p.now-count 현재 오프라인 서명인원: #{OfflinePetition.count == 0 ? 0 : OfflinePetition.last.offline_count}
     = form_for OfflinePetition.new do |f|
       .form-group
         = f.label :offline_count, '오프라인 서명인원'
