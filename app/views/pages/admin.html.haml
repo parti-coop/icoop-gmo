@@ -3,6 +3,10 @@
     .form-group
       %p.now-count 현재 오프라인 서명인원: #{OfflinePetition.last.offline_count}
     = form_for OfflinePetition.new do |f|
-      = f.label :offline_count, '오프라인 서명인원:'
-      = f.text_field :offline_count, placeholder: '숫자만 입력해주세요', class: 'form-control form-group'
-      = f.submit '저장'
+      .form-group
+        = f.label :offline_count, '오프라인 서명인원'
+        = f.text_field :offline_count, placeholder: '숫자만 입력해주세요', class: 'form-control'
+      .form-group
+        = f.label :pass_world, '관리자 비밀번호'
+        = f.password_field :pass_word, placeholder: '관리자 비밀번호를 입력하세요', class: 'form-control'
+      = f.submit '저장', class: 'form-control submit'

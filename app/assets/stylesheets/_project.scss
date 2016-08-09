@@ -631,7 +631,16 @@ section#project {
 }
 section#offline-input {
   margin: 5%;
+  .container {
+    width: 500px;
+    @media (max-width: 767px) {
+      width: 100%;
+    }
+  }
   .now-count {
     color: blue;
+  }
+  .submit {
+    border: 2px solid blue;
   }
 }
