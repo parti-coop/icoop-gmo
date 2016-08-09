@@ -77,29 +77,29 @@ section#project {
         margin-top: -70px;
 
         &__facebook {
-          padding-right: 20px;
+          width: 44px;
         }
         &__twitter {
-          padding-right: 20px;
+          width: 50px;
         }
         &__kas {
-
+          width: 50px;
         }
 
         &--mobile {
-          padding-top: 12px;
-          margin-right: 16px;
+          padding-top: 1%;
+          margin-right: 2%;
 
           &__facebook {
-            padding-right: 20px;
+            padding-right: 0;
             width: 32px;
           }
           &__twitter {
-            padding-right: 20px;
-            width: 42px;
+            padding-right: 0;
+            width: 37px;
           }
           &__kas {
-            width: 12px;
+            width: 41px;
           }
         }
       }
@@ -599,13 +599,20 @@ section#project {
       }
 
       .logo-wrapper {
+        margin-right: -8px;
+        margin-top: -6px;
+
         @media (max-width: 767px) {
           float: none !important;
           padding-top: 10px;
+
         }
 
         .icoop-logo {
-          padding-right: 16px;
+          width: 108px;
+        }
+        .parti-logo {
+          width: 70px;
         }
       }
 

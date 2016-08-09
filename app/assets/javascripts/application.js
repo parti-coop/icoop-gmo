@@ -24,25 +24,25 @@ $(function(){
 
   $('.social-icon__facebook').hover(
     function() {
-      $( this ).attr('src', '/assets/social-after-facebook-9da7838e6d2d559d60b354a464dd0c2bea279368502d4d76004a161814f6f32b.png');
+      $( this ).attr('src', '/assets/social-after-facebook-61c10df54a5a3cb4a91f41b667378c2505097fd474af71f025b5c1314b37cd0b.png');
     }, function() {
-      $( this ).attr('src', '/assets/social-before-facebook-c2436b3437a87a4bb9ede976012016141113898d49795cc70d76788706f964b7.png');
+      $( this ).attr('src', '/assets/social-before-facebook-6fcab9b573641fd9216fee67c17ee90721051cd74cecc89249e9721fe9e95a20.png');
     }
   );
 
   $('.social-icon__twitter').hover(
     function() {
-      $( this ).attr('src', '/assets/social-after-twitter-253edbc0b6a1c30024f2c001c77b36ac80fc73808bd2f31850dd91a278deedac.png');
+      $( this ).attr('src', '/assets/social-after-twitter-c2bfd85944516582d1c4cb76394017a0b35a0dd1848e3821fd63bbdd132f121e.png');
     }, function() {
-      $( this ).attr('src', '/assets/social-before-twitter-a995135dba2fa96c4d2943aaa5fee4ba9dbb1e77273d28f43299d84b348f9951.png');
+      $( this ).attr('src', '/assets/social-before-twitter-c1f671b9ab38fc7faff8e632501448e57b55bc16b7e8d5c70030ab32992fc5a4.png');
     }
   );
 
   $('.social-icon__kas').hover(
     function() {
-      $( this ).attr('src', '/assets/social-after-kas-5ad76463c77d8c851d62dff2184bcc0d1d434f25a71e2f377f8eae736eb6f2eb.png');
+      $( this ).attr('src', '/assets/social-after-kas-6f2a18ffa182946348ea43a8ee53cb678403066f443a3133ce929c26559c27dd.png');
     }, function() {
-      $( this ).attr('src', '/assets/social-before-kas-806011bf766c5f7422282fd64eba9fe125b2138fbb4315c1d36ff12117555a67.png');
+      $( this ).attr('src', '/assets/social-before-kas-73035319278f215d13b565f88fd098b7307e416d552811b61895e6fa4a4af47b.png');
     }
   );
 
