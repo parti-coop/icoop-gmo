@@ -1,0 +1,8 @@
+%section#offline-input
+  .container
+    .form-group
+      %p.now-count 현재 오프라인 서명인원: #{OfflinePetition.last.offline_count}
+    = form_for OfflinePetition.new do |f|
+      = f.label :offline_count, '오프라인 서명인원:'
+      = f.text_field :offline_count, placeholder: '숫자만 입력해주세요', class: 'form-control form-group'
+      = f.submit '저장'
