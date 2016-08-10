@@ -70,7 +70,9 @@ section#project {
         width: 120px;
         &--mobile {
           width: 30%;
-          margin-left: 16px;
+          /* margin-left: 16px; */
+          margin-left: 0;
+          margin-bottom: 18px;
         }
       }
       .social-icon {
