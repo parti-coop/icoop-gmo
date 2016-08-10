@@ -617,21 +617,52 @@ section#project {
       }
 
       .logo-wrapper {
-        margin-right: -8px;
-        margin-top: -6px;
+        margin-top: 36px;
 
         @media (max-width: 767px) {
           float: none !important;
           padding-top: 10px;
-          width: 100%
+          width: 100%;
+          margin-top: 20px;
 
         }
 
-        .icoop-logo {
-          width: 108px;
+        a {
+          padding-left: 6px;
+          padding-right: 6px;
         }
-        .parti-logo {
-          width: 70px;
+
+        .logo {
+          &__icoop {
+            width: 108px;
+            @media (max-width: 767px) {
+              width: 17%;
+            }
+          }
+
+          &__ymca {
+            height: 54px;
+            @media (max-width: 767px) {
+              width: 11%;
+              height: auto;
+            }
+          }
+
+          &__ccej {
+            height: 29px;
+            @media (max-width: 767px) {
+              width: 39%;
+              height: auto;
+            }
+          }
+
+          &__parti {
+            width: 70px;
+            @media (max-width: 767px) {
+              width: 14%;
+              padding-right: 2%;
+            }
+          }
         }
       }
 

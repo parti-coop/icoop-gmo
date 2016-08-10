@@ -6,9 +6,13 @@
       = link_to 'https://www.facebook.com/inmycart/', 'https://www.facebook.com/inmycart/', target: '_blank', class: 'footer-icoop-ask__url'
   .logo-wrapper
     = link_to 'http://icoop.coop/', target: '_blank' do
-      = image_tag 'icoop-logo.png', class: 'icoop-logo'
+      = image_tag 'logo-icoop.png', class: 'logo__icoop'
+    = link_to 'http://icoop.coop/', target: '_blank' do
+      = image_tag 'logo-ymca.png', class: 'logo__ymca'
+    = link_to 'http://icoop.coop/', target: '_blank' do
+      = image_tag 'logo-ccej.png', class: 'logo__ccej'
     = link_to 'http://parti.xyz/', target: '_blank' do
-      = image_tag 'parti-logo.png', class: 'parti-logo'
+      = image_tag 'logo-parti.png', class: 'logo__parti'
   %br
   - unless browser.device.mobile?
     = link_to 'http://up.parti.xyz/', target: '_blank' do
