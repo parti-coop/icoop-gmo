@@ -2,21 +2,20 @@
   - unless browser.device.mobile?
     = link_to 'https://www.facebook.com/inmycart/', target: '_blank' do
       = image_tag 'baggum-logo-before.png', class: 'baggum-logo pull-left'
-    .social-icon.pull-right
-      = image_tag 'social-before-facebook.png', class: 'social-icon__facebook'
-      = image_tag 'social-before-twitter.png', class: 'social-icon__twitter'
-      = image_tag 'social-before-kas.png', class: 'social-icon__kas'
+    / .social-icon.pull-right
+    /   = image_tag 'social-before-facebook.png', class: 'social-icon__facebook'
+    /   = image_tag 'social-before-twitter.png', class: 'social-icon__twitter'
+    /   = image_tag 'social-before-kas.png', class: 'social-icon__kas'
   - if browser.device.mobile?
     = link_to 'https://www.facebook.com/inmycart/', target: '_blank' do
       = image_tag 'baggum-logo-mobile.png', class: 'baggum-logo--mobile pull-left'
-    .social-icon--mobile.pull-right
-      = image_tag 'social-after-facebook.png', class: 'social-icon--mobile__facebook'
-      = image_tag 'social-after-twitter.png', class: 'social-icon--mobile__twitter'
-      = image_tag 'social-after-kas.png', class: 'social-icon--mobile__kas'
+    / .social-icon--mobile.pull-right
+    /   = image_tag 'social-after-facebook.png', class: 'social-icon--mobile__facebook'
+    /   = image_tag 'social-after-twitter.png', class: 'social-icon--mobile__twitter'
+    /   = image_tag 'social-after-kas.png', class: 'social-icon--mobile__kas'
     %br
     %hr.intro-hr
   %img.test-image
-  / %img{:alt => "Smiley face", :height => "42", :src => "smiley.gif", :width => "42"}/
 
   %p.intro-title
     GMO완전표시제
