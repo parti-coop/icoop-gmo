@@ -3,12 +3,12 @@
   %p.petition-summary
     온라인 서명은
     %span
-      %span.petition-count> #{@online_count}
+      %span.petition-count> #{number_with_delimiter(@online_count)}
       명,
       %br.visible-xs
       오프라인 서명은
     %span
-      %span.petition-count> #{@offline_count}
+      %span.petition-count> #{number_with_delimiter(@offline_count)}
       명 진행 중!
 
   .petition-bar-wrapper
