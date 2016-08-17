@@ -4,8 +4,72 @@
 //= require jquery.validate
 //= require unobtrusive_flash
 //= require unobtrusive_flash_bootstrap
+//= require jssocials
+//= require kakao
+
+Kakao.init('6cd2725534444560cb5fe8c77b020bd6');
+
+$.is_blank = function (obj) {
+  if (!obj || $.trim(obj) === "") return true;
+  if (obj.length && obj.length > 0) return false;
+
+  for (var prop in obj) if (obj[prop]) return false;
+  return true;
+}
+
+var prepare_social_share = function($base) {
+  $base.find('[data-action="nongmo-share"]').each(function(i, elm) {
+    var $elm = $(elm);
+
+    var url = $elm.data('share-url');
+    var sitename = $elm.data('share-sitename');
+    var text = $elm.data('share-text');
+    var share = $elm.data('share-provider');
+    var logo = $elm.data('share-logo');
+    var css = $elm.data('share-css');
+    if ($.is_blank(share)) return;
+    var image_url = $elm.data('share-image');
+    var image_width = $elm.data('share-image-width');
+    var image_height = $elm.data('share-image-height');
+
+    switch(share) {
+    case 'kakao-link':
+      Kakao.Link.createTalkLinkButton({
+        container: elm,
+        label: text,
+        image: {
+          src: image_url,
+          width: image_width,
+          height: image_height
+        },
+        webLink: {
+          text: sitename + '에서 보기',
+          url: url
+        }
+      });
+    break
+    case 'kakao-story':
+      $elm.on('click', function(e) {
+        Kakao.Story.share({
+          url: url,
+          text: text
+        });
+      });
+    break
+    default:
+      $elm.jsSocials({
+        showCount: false,
+        showLabel: false,
+        shares: [{share: share, logo: logo, css: css}],
+        text: text,
+        url: url
+      });
+    }
+  });
+}
 
 $(function(){
+  prepare_social_share($('html'));
   jQuery.validator.setDefaults({
     debug: true,
     success: "valid"
@@ -22,7 +86,7 @@ $(function(){
     }
   );
 
-  $('.social-icon__facebook').hover(
+  $('.social-icon__facebook img').hover(
     function() {
       $( this ).attr('src', '/assets/social-after-facebook-61c10df54a5a3cb4a91f41b667378c2505097fd474af71f025b5c1314b37cd0b.png');
     }, function() {
@@ -30,7 +94,7 @@ $(function(){
     }
   );
 
-  $('.social-icon__twitter').hover(
+  $('.social-icon__twitter img').hover(
     function() {
       $( this ).attr('src', '/assets/social-after-twitter-c2bfd85944516582d1c4cb76394017a0b35a0dd1848e3821fd63bbdd132f121e.png');
     }, function() {
@@ -46,7 +110,6 @@ $(function(){
     }
   );
 
-
   $(window).scroll(function(){
     if($('#bottom-banner-wrapper').offset().top >= $('#hide-fixed-button').offset().top) {
       $('#bottom-banner-wrapper').css('margin-bottom','-100px');
@@ -55,3 +118,6 @@ $(function(){
     };
   })
 });
+
+
+

@@ -73,35 +73,54 @@ section#project {
         &--mobile {
           width: 30%;
           position: static;
-          /* margin-left: 16px; */
-          margin-left: 0;
-          margin-bottom: 18px;
+          margin-left: 16px;
+          margin-bottom: 0;
         }
       }
       .social-icon {
         margin-top: -70px;
+        position: absolute;
+        right: 40px;
 
         &__facebook {
-          width: 44px;
+          img {
+            width: 45px;
+            height: auto;
+          }
         }
         &__twitter {
-          width: 50px;
+          img {
+            width: 48px;
+            height: auto;
+          }
         }
         &__kas {
           width: 50px;
+          cursor: pointer;
         }
 
         &--mobile {
-          padding-top: 1%;
+          padding-top: 0;
           margin-right: 2%;
+          margin-bottom: 0;
+          .jssocials {
+            padding-left: 0;
+            padding-right: 0;
+          }
 
           &__facebook {
-            padding-right: 0;
-            width: 32px;
+            img {
+              padding-right: 0;
+              width: 38px;
+              height: auto;
+            }
           }
           &__twitter {
-            padding-right: 0;
-            width: 37px;
+            img {
+              padding-right: 0;
+              width: 41px;
+              height: auto;
+            }
           }
           &__kas {
             width: 41px;
