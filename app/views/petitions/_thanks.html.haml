@@ -5,8 +5,28 @@
       서명완료
     %p.petition-complete__message
       GMO완전표시제, 내가 바꿈!
-      / %br
-      / 친구와 함께하면 바꿀 수 있어요.
+      %br
+      친구와 함께하면 바꿀 수 있어요.
+    %ul.list-inline.thanks-social-wrapper
+      - base_data = {action: 'nongmo-share', 'share-url': root_url, 'share-text': meta_tags['description'] }
+      - %w(facebook twitter kakao-link kakao-story).each do |provider|
+
+        - data = base_data.merge('share-provider': provider)
+
+        - if provider == 'kakao-link'
+          - hide_kakao_link = ' hide'
+          - data = data.merge('share-image': meta_tags['image'], 'share-image-width': '1200', 'share-image-height': '630', 'share-logo': asset_url('thanks-social-kas.png'), 'share-css': 'thanks-social__kas')
+        - if provider == 'twitter'
+          - data = data.merge('share-text': "#GMO완전표시제 지지를 위한 서명에 동참해주세요! #소비자기본권 #아이쿱", 'share-logo': asset_url('thanks-social-twitter.png'), 'share-css': 'thanks-social__twitter')
+        - if provider == 'facebook'
+          - data = data.merge('share-logo': asset_url('thanks-social-facebook.png'), 'share-css': 'thanks-social__facebook')
+        %li.share-item.jssocials{class: "share-#{provider}#{hide_kakao_link}", data: data }
+          .jssocials-shares
+            .jssocials-share
+              - if provider == 'kakao-story'
+                = image_tag 'thanks-social-kas.png', class: 'social-icon__kas'
+              - if provider == 'kakao-link'
+                = image_tag 'thanks-social-kas.png', class: 'social-icon__kas'
     / .thanks-social-wrapper
     /   = image_tag 'thanks-social-facebook.png', class: 'thanks-social__facebook'
     /   = image_tag 'thanks-social-twitter.png', class: 'thanks-social__twitter'
