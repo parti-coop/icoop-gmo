@@ -33,21 +33,6 @@ var prepare_social_share = function($base) {
     var image_height = $elm.data('share-image-height');
 
     switch(share) {
-    case 'kakao-link':
-      Kakao.Link.createTalkLinkButton({
-        container: elm,
-        label: text,
-        image: {
-          src: image_url,
-          width: image_width,
-          height: image_height
-        },
-        webLink: {
-          text: sitename + '에서 보기',
-          url: url
-        }
-      });
-    break
     case 'kakao-story':
       $elm.on('click', function(e) {
         Kakao.Story.share({
@@ -110,7 +95,11 @@ $(function(){
     }
   );
 
+
   $(window).scroll(function(){
+    if($('#hide-fixed-button').offset() === undefined) {
+      return;
+    }
     if($('#bottom-banner-wrapper').offset().top >= $('#hide-fixed-button').offset().top) {
       $('#bottom-banner-wrapper').css('margin-bottom','-100px');
     }else {

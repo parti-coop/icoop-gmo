@@ -16,7 +16,7 @@ class PetitionsController < ApplicationController
     @petitions = Petition.recent.page params[:page]
 
     respond_to do |format|
-      format.js
+      format.js { prepare_meta_tags }
       format.any { redirect_to root_path }
     end
   end
