@@ -17,7 +17,6 @@ gem 'jquery-rails'
 # util
 gem 'kaminari', '~> 0.16.3'
 gem 'browser', '~> 2.0', '>= 2.0.2'
-gem 'rack-cors', :require => 'rack/cors'
 
 # tool
 gem 'envyable', '~> 0.2.0'
