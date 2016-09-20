@@ -10,8 +10,10 @@
         = date_f p.created_at
       %br
       %p.list-body
-        = p.body
-        = '서명합니다.' if p.body.blank?
+        - if p.body.blank? or p.is_body_hidden?
+          = '서명합니다.'
+        - else
+          = p.body
     %hr
   .petitions-pagination
     = paginate @petitions, remote: true, params: { controller: :petitions, action: :index }

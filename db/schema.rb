@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160806100046) do
+ActiveRecord::Schema.define(version: 20160920064312) do
 
   create_table "offline_petitions", force: :cascade do |t|
     t.integer  "offline_count", limit: 4, null: false
@@ -20,11 +20,12 @@ ActiveRecord::Schema.define(version: 20160806100046) do
   end
 
   create_table "petitions", force: :cascade do |t|
-    t.string   "name",       limit: 255,   null: false
-    t.string   "email",      limit: 255,   null: false
-    t.text     "body",       limit: 65535
-    t.datetime "created_at",               null: false
-    t.datetime "updated_at",               null: false
+    t.string   "name",           limit: 255,                   null: false
+    t.string   "email",          limit: 255,                   null: false
+    t.text     "body",           limit: 65535
+    t.datetime "created_at",                                   null: false
+    t.datetime "updated_at",                                   null: false
+    t.boolean  "is_body_hidden",               default: false
   end
 
   add_index "petitions", ["email"], name: "index_petitions_on_email", unique: true, using: :btree
