@@ -20,7 +20,10 @@
         #{number_with_delimiter(petition.on_off_count)}명
 
     .petition-bar{style: ("background-color:#bfbfbf" if petition.on_off_count == 0)}
-      .petition-counted{style: "width: #{petition.total_percentage}%"}
+      - if petition.total_percentage <= 100
+        .petition-counted{style: "width: #{petition.total_percentage}%"}
+      - else
+        .petition-counted{style: "width: 100%"}
   %br
   = link_to '나도 참여하기', root_path(anchor: 'petition-form-anchor'),  class: 'petition-btn btn hidden-xs'
 
