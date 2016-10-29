@@ -1,6 +1,7 @@
 class Petition < ActiveRecord::Base
   paginates_per 5
   scope :recent, -> { order(created_at: :desc) }
+  scope :oldest, -> { order(created_at: :asc) }
   validates :name, presence: true
   validates :email, presence: true, uniqueness: true
   validates :policy_agree, presence: true

@@ -17,6 +17,8 @@ gem 'jquery-rails'
 # util
 gem 'kaminari', '~> 0.16.3'
 gem 'browser', '~> 2.0', '>= 2.0.2'
+gem 'axlsx', '~> 2.0', '>= 2.0.1'
+gem 'axlsx_rails', '~> 0.4.0'
 
 # tool
 gem 'envyable', '~> 0.2.0'
@@ -26,10 +28,6 @@ gem "recaptcha", require: "recaptcha/rails"
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'ruby_dig', '~> 0.0.2'
-
-# notification
-gem 'slack-notifier', '~> 1.4'
-gem 'exception_notification', '~> 4.1', '>= 4.1.4'
 
 # seo
 gem 'meta-tags', '~> 2.1.0'
